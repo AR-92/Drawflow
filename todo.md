@@ -1,0 +1,17 @@
+make sidebar for every page 
+automation page
+flows page
+projects page
+organizations page
+settings page
+login page
+users
+admin
+roles
+teams
+
+lets create pages first 
+lets now complete sidebar first
+sidebar is completed 
+now lets add floweditor
+flow editor added

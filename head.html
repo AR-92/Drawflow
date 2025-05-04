@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LangFlow</title>
+  <!-- Include Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-gray-100 h-screen overflow-hidden">
+  <!-- Header Section -->
+  <header class="flex h-16 w-full items-center justify-between gap-2 border-b px-5 py-2 dark:bg-gray-800">
+
+    <!-- Left: Logo -->
+    <div class="flex items-center gap-2">
+      <!-- Logo image with Tailwind classes instead of inline style -->
+      <img src="./logo.png" alt="Logo" class="w-[150px] cursor-pointer" />
+    </div>
+
+    <!-- Center: Navigation and Flow Name -->
+    <div class="flex-1 relative flex justify-center">
+      <div class="flex items-center gap-2">
+        <!-- Navigation Bar (visible on medium screens and above) -->
+        <div class="hidden md:flex w-20 max-w-fit justify-end">
+          <!-- Add navigation items here -->
+        </div>
+
+        <!-- Separator (only visible on medium screens and above) -->
+        <div class="hidden md:flex select-none font-normal text-gray-400">
+          /
+        </div>
+
+        <!-- Flow Name Display with Editable Input and Dropdown -->
+        <div class="overflow-hidden truncate text-sm">
+          <div class="flex items-center gap-2">
+            <!-- Editable Flow Name Input -->
+            <div class="relative inline-flex w-[136px]">
+              <input id="input-flow-name" type="text" maxlength="38"
+                class="h-6 w-full cursor-text font-semibold bg-transparent pl-1 pr-0 border-0 outline-none focus:ring-0 text-primary hover:opacity-80"
+                value="Simple Agent (20)" />
+              <!-- Invisible span to maintain width if needed -->
+              <span class="invisible absolute left-0 top-0 -z-10 whitespace-pre pl-1 font-semibold">
+                Simple Agent (20)
+              </span>
+            </div>
+            <!-- Dropdown Toggle Button -->
+            <button type="button" aria-haspopup="menu" aria-expanded="false" class="group">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                class="flex h-5 w-5 text-gray-400 hover:text-primary">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Status Indicator (visible on small screens and above) -->
+        <div class="hidden sm:flex w-28 items-center">
+          <div class="flex items-center gap-2 text-sm text-gray-400">
+            <!-- Saved status text -->
+            <div class="text-xs font-medium text-green-500">
+              Saved
+            </div>
+            <!-- Stop button is kept hidden/disabled for now; remove if not needed -->
+            <!--
+            <button disabled class="hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                   stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                   class="h-4 w-4">
+                <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+              </svg>
+              <span>Stop</span>
+            </button>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Save Button -->
+    <div class="flex items-center gap-2">
+      <button class="bg-white text-black px-4 py-2 font-bold rounded-md text-sm">
+        Save
+      </button>
+    </div>
+
+  </header>
+</body>
+
+</html>
